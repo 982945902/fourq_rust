@@ -9,6 +9,10 @@ homepage = ""
 documentation = ""
 repository = "https://github.com/982945902/fourq_rust.git"
 readme = "README.md"
+exclude = [
+    "c/build/*",
+    ".vscode/*",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
