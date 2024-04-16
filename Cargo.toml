@@ -7,7 +7,8 @@ license-file = "LICENSE"
 description = "rust bind for the FourQlib that is a fourq curve implementation"
 homepage = ""
 documentation = ""
-repository = ""
+repository = "https://github.com/982945902/fourq_rust.git"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
