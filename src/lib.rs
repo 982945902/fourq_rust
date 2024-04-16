@@ -26,11 +26,8 @@ mod tests {
         let scalar = Scalar::new(thread_rng().gen());
         let point = Point::from_hash(&scalar.bytes);
 
-        let scalar2 = scalar.clone();
-        let point2 = point.clone();
-
         let a = scalar * point;
-        let b = point2 * scalar2;
+        let b = point * scalar;
         assert!(a == b);
     }
 
@@ -41,14 +38,14 @@ mod tests {
 
         let example_id: [u8; 32] = thread_rng().gen();
 
-        let p1_example = example_id.clone();
-        let p2_example = example_id.clone();
+        let p1_example = example_id;
+        let p2_example = example_id;
 
         let p1_example_point = Point::from_hash(&p1_example);
         let p2_example_point = Point::from_hash(&p2_example);
 
-        let p1_ecc_k = p1_key.clone() * p1_example_point * p2_key.clone();
-        let p2_ecc_k = p2_key.clone() * p2_example_point * p1_key.clone();
+        let p1_ecc_k = p1_key * p1_example_point * p2_key;
+        let p2_ecc_k = p2_key * p2_example_point * p1_key;
 
         assert!(p1_ecc_k == p2_ecc_k);
     }

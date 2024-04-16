@@ -20,7 +20,7 @@ pub(crate) mod C {
     include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Copy, Default)]
 pub struct Point {
     point: C::point_t,
 }
