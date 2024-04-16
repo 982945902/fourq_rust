@@ -1,0 +1,32 @@
+
+
+#ifndef __FOURQ_DEFINE_H__
+#define __FOURQ_DEFINE_H__
+
+// For C++
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#cmakedefine __WINDOWS__
+#cmakedefine __LINUX__
+
+#cmakedefine _MSC_VER
+#cmakedefine __GNUC__
+#cmakedefine __clang__
+
+#cmakedefine _AMD64_
+#cmakedefine _X86_
+#cmakedefine _ARM_
+#cmakedefine _ARM64_
+
+#cmakedefine _AVX2_
+#cmakedefine _AVX_
+#cmakedefine _ASM_
+#cmakedefine _GENERIC_
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

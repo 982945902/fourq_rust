@@ -1,0 +1,21 @@
+[package]
+name = "fourq"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+license-file = "LICENSE"
+description = "rust bind for the FourQlib that is a fourq curve implementation"
+homepage = ""
+documentation = ""
+repository = ""
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bindgen = "0.69.4"
+rand = "0.8.5"
+
+
+
+[build-dependencies]
+bindgen = "0.65.1"
