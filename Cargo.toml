@@ -1,7 +1,7 @@
 [package]
 name = "fourq"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 license = "Apache-2.0"
 license-file = "LICENSE"
 description = "rust bind for the FourQlib that is a fourq curve implementation"
