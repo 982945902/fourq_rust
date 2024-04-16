@@ -44,11 +44,11 @@ impl Point {
         unsafe { C::encode(point_to_ptr!(self.point), bytes.as_mut_ptr()) }
     }
 
-    pub fn decode(bytes: &mut [u8]) -> Self {
+    pub fn decode(bytes: &[u8]) -> Self {
         let point = [C::point_affine::default()];
 
         unsafe {
-            C::decode(bytes.as_mut_ptr(), point_to_ptr!(point));
+            C::decode(bytes.as_ptr(), point_to_ptr!(point));
         }
 
         Point { point }
