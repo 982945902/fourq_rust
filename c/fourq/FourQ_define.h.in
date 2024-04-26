@@ -8,22 +8,48 @@
 extern "C" {
 #endif
 
+#ifndef __WINDOWS__
 #cmakedefine __WINDOWS__
+#endif
+#ifndef __LINUX__
 #cmakedefine __LINUX__
+#endif
 
+#ifndef _MSC_VER
 #cmakedefine _MSC_VER
+#endif
+#ifndef __GNUC__
 #cmakedefine __GNUC__
+#endif
+#ifndef __clang__
 #cmakedefine __clang__
+#endif
 
+#ifndef _AMD64_
 #cmakedefine _AMD64_
+#endif
+#ifndef _X86_
 #cmakedefine _X86_
+#endif
+#ifndef _ARM_
 #cmakedefine _ARM_
+#endif
+#ifndef _ARM64_
 #cmakedefine _ARM64_
+#endif
 
+#ifndef _AVX2_
 #cmakedefine _AVX2_
+#endif
+#ifndef _AVX_
 #cmakedefine _AVX_
+#endif
+#ifndef _ASM_
 #cmakedefine _ASM_
+#endif
+#ifndef _GENERIC_
 #cmakedefine _GENERIC_
+#endif
 
 #ifdef __cplusplus
 }

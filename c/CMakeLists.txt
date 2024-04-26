@@ -378,7 +378,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(__clang__ ON)
 endif()
 
-configure_file(${CMAKE_CURRENT_LIST_DIR}/fourq/Fourq_define.h.in ${CMAKE_CURRENT_LIST_DIR}/fourq/FourQ_define.h)
+configure_file(${CMAKE_CURRENT_LIST_DIR}/fourq/FourQ_define.h.in ${CMAKE_CURRENT_LIST_DIR}/fourq/FourQ_define.h)
 
 target_sources(apsi PRIVATE ${APSI_SOURCE_FILES})
 
