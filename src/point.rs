@@ -35,7 +35,11 @@ impl Point {
     pub fn from_hash(bytes: &[u8]) -> Point {
         let point = [C::point_affine::default()];
         unsafe {
-            C::HashToCurve(bytes.as_ptr() as *mut [u64; 2], point_to_ptr!(point));
+            let mut r0 = bytes.as_ptr() as *mut [u64; 2];
+            let mut r1 = r0.add(1);
+            C::mod1271(r0 as *mut u64);
+            C::mod1271(r1 as *mut u64);
+            C::HashToCurve(r0, point_to_ptr!(point));
         }
         Point { point }
     }
